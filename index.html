@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAWDROBE — Одяг для собак</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="#" class="nav__logo">PAWDROBE</a>
+    <ul class="nav__links">
+      <li><a href="#products">Каталог</a></li>
+      <li><a href="#about">Про нас</a></li>
+      <li><a href="#contact">Контакти</a></li>
+    </ul>
+    <button class="nav__cart" aria-label="Кошик">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="nav__cart-count">0</span>
+    </button>
+    <button class="nav__burger" aria-label="Меню" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#products" class="menu-link">Каталог</a></li>
+      <li><a href="#about" class="menu-link">Про нас</a></li>
+      <li><a href="#contact" class="menu-link">Контакти</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__tag">Новa колекція · Весна 2026</p>
+      <h1 class="hero__title">Стиль для<br/>найкращого друга</h1>
+      <p class="hero__subtitle">Мінімалістичний одяг для собак — зручний, якісний і красивий.</p>
+      <a href="#products" class="btn">Переглянути колекцію</a>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__circle"></div>
+      <div class="hero__dog">🐾</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature">
+      <span class="feature__icon">🧵</span>
+      <h3>Натуральні матеріали</h3>
+      <p>Органічна бавовна та вовна, безпечні для шкіри вашого улюбленця.</p>
+    </div>
+    <div class="feature">
+      <span class="feature__icon">📐</span>
+      <h3>Ідеальний крій</h3>
+      <p>Продумані лекала для 12 порід — від чихуахуа до лабрадора.</p>
+    </div>
+    <div class="feature">
+      <span class="feature__icon">🌱</span>
+      <h3>Еко-виробництво</h3>
+      <p>Відповідальний підхід до кожного етапу виробництва.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="section-header">
+      <h2>Каталог</h2>
+      <div class="filters">
+        <button class="filter active" data-filter="all">Усі</button>
+        <button class="filter" data-filter="jacket">Куртки</button>
+        <button class="filter" data-filter="sweater">Светри</button>
+        <button class="filter" data-filter="accessory">Аксесуари</button>
+      </div>
+    </div>
+
+    <div class="products__grid" id="productsGrid">
+
+      <div class="card" data-category="jacket">
+        <div class="card__img card__img--1">
+          <span class="card__badge">Новинка</span>
+        </div>
+        <div class="card__body">
+          <p class="card__cat">Куртка</p>
+          <h3 class="card__name">Soft Shell Mini</h3>
+          <div class="card__footer">
+            <span class="card__price">890 ₴</span>
+            <button class="btn btn--sm add-to-cart" data-name="Soft Shell Mini" data-price="890">+ Кошик</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-category="sweater">
+        <div class="card__img card__img--2"></div>
+        <div class="card__body">
+          <p class="card__cat">Светр</p>
+          <h3 class="card__name">Merino Cozy</h3>
+          <div class="card__footer">
+            <span class="card__price">650 ₴</span>
+            <button class="btn btn--sm add-to-cart" data-name="Merino Cozy" data-price="650">+ Кошик</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-category="jacket">
+        <div class="card__img card__img--3">
+          <span class="card__badge card__badge--sale">−20%</span>
+        </div>
+        <div class="card__body">
+          <p class="card__cat">Куртка</p>
+          <h3 class="card__name">Rain Guard</h3>
+          <div class="card__footer">
+            <span class="card__price">720 ₴ <s>900 ₴</s></span>
+            <button class="btn btn--sm add-to-cart" data-name="Rain Guard" data-price="720">+ Кошик</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-category="accessory">
+        <div class="card__img card__img--4"></div>
+        <div class="card__body">
+          <p class="card__cat">Аксесуар</p>
+          <h3 class="card__name">Wool Bandana</h3>
+          <div class="card__footer">
+            <span class="card__price">220 ₴</span>
+            <button class="btn btn--sm add-to-cart" data-name="Wool Bandana" data-price="220">+ Кошик</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-category="sweater">
+        <div class="card__img card__img--5"></div>
+        <div class="card__body">
+          <p class="card__cat">Светр</p>
+          <h3 class="card__name">Nordic Knit</h3>
+          <div class="card__footer">
+            <span class="card__price">780 ₴</span>
+            <button class="btn btn--sm add-to-cart" data-name="Nordic Knit" data-price="780">+ Кошик</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-category="accessory">
+        <div class="card__img card__img--6">
+          <span class="card__badge">Новинка</span>
+        </div>
+        <div class="card__body">
+          <p class="card__cat">Аксесуар</p>
+          <h3 class="card__name">Bow Collar</h3>
+          <div class="card__footer">
+            <span class="card__price">340 ₴</span>
+            <button class="btn btn--sm add-to-cart" data-name="Bow Collar" data-price="340">+ Кошик</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__text">
+      <p class="hero__tag">Наша історія</p>
+      <h2>Ми створюємо з любов'ю</h2>
+      <p>PAWDROBE — це невелика київська майстерня, де кожен виріб шиється вручну. Ми віримо, що зручність і естетика не суперечать одне одному — навіть у світі собачої моди.</p>
+      <p>Наші вироби проходять тест на зручність від команди справжніх чотирилапих тестувальників.</p>
+      <a href="#contact" class="btn btn--outline">Написати нам</a>
+    </div>
+    <div class="about__stats">
+      <div class="stat">
+        <span class="stat__num">500+</span>
+        <span class="stat__label">щасливих клієнтів</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">12</span>
+        <span class="stat__label">порід у розмірній сітці</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">3</span>
+        <span class="stat__label">роки на ринку</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">100%</span>
+        <span class="stat__label">натуральні матеріали</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Зв'язатись з нами</h2>
+    <p>Є питання щодо розміру або замовлення? Напишіть — відповімо протягом години.</p>
+    <form class="contact__form" id="contactForm">
+      <div class="form-row">
+        <input type="text" placeholder="Ваше ім'я" required />
+        <input type="email" placeholder="Email" required />
+      </div>
+      <textarea placeholder="Ваше повідомлення..." rows="4" required></textarea>
+      <button type="submit" class="btn">Надіслати</button>
+    </form>
+    <div class="contact__success" id="formSuccess">
+      ✓ Дякуємо! Ми зв'яжемось з вами найближчим часом.
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__top">
+      <span class="nav__logo">PAWDROBE</span>
+      <div class="footer__links">
+        <a href="#products">Каталог</a>
+        <a href="#about">Про нас</a>
+        <a href="#contact">Контакти</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 PAWDROBE. Зроблено з ❤️ у Києві.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart" id="cartDrawer">
+    <div class="cart__header">
+      <h3>Кошик</h3>
+      <button class="cart__close" id="cartClose">✕</button>
+    </div>
+    <div class="cart__items" id="cartItems">
+      <p class="cart__empty">Кошик порожній 🐾</p>
+    </div>
+    <div class="cart__footer" id="cartFooter" style="display:none">
+      <div class="cart__total">Разом: <strong id="cartTotal">0 ₴</strong></div>
+      <button class="btn" style="width:100%">Оформити замовлення</button>
+    </div>
+  </aside>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
