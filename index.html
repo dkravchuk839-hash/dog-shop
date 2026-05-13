@@ -1,259 +1,875 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PAWDROBE — Одяг для собак</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>HVYLYA — AI-Powered Growth Infrastructure</title>
+  <meta name="description" content="We build AI systems that scale construction businesses. Meta Ads, AI automation, CRM systems, lead qualification and premium digital infrastructure." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <a href="#" class="nav__logo">PAWDROBE</a>
-    <ul class="nav__links">
-      <li><a href="#products">Каталог</a></li>
-      <li><a href="#about">Про нас</a></li>
-      <li><a href="#contact">Контакти</a></li>
-    </ul>
-    <button class="nav__cart" aria-label="Кошик">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
-      </svg>
-      <span class="nav__cart-count">0</span>
-    </button>
-    <button class="nav__burger" aria-label="Меню" id="burger">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+<!-- ═══════════════════════════════════════════════
+     LOADER
+═══════════════════════════════════════════════ -->
+<div id="loader">
+  <div class="loader__logo">HVYLYA</div>
+  <div class="loader__bar"><div class="loader__fill"></div></div>
+  <div class="loader__tagline">AI-Powered Growth Infrastructure</div>
+</div>
 
-  <!-- MOBILE MENU -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#products" class="menu-link">Каталог</a></li>
-      <li><a href="#about" class="menu-link">Про нас</a></li>
-      <li><a href="#contact" class="menu-link">Контакти</a></li>
-    </ul>
+<!-- ═══════════════════════════════════════════════
+     CURSOR
+═══════════════════════════════════════════════ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="nav-logo">HVYLYA</a>
+  <ul class="nav-links">
+    <li><a href="#solutions">Services</a></li>
+    <li><a href="#flow">Systems</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#cta" class="btn-primary">Book a Call</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#solutions">Services</a></li>
+    <li><a href="#flow">Systems</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+  <a href="#cta" class="btn-primary">Book a Call</a>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="section" id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
   </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__content">
-      <p class="hero__tag">Новa колекція · Весна 2026</p>
-      <h1 class="hero__title">Стиль для<br/>найкращого друга</h1>
-      <p class="hero__subtitle">Мінімалістичний одяг для собак — зручний, якісний і красивий.</p>
-      <a href="#products" class="btn">Переглянути колекцію</a>
-    </div>
-    <div class="hero__visual">
-      <div class="hero__circle"></div>
-      <div class="hero__dog">🐾</div>
-    </div>
-  </section>
+  <div class="container">
+    <div class="hero-inner">
 
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="feature">
-      <span class="feature__icon">🧵</span>
-      <h3>Натуральні матеріали</h3>
-      <p>Органічна бавовна та вовна, безпечні для шкіри вашого улюбленця.</p>
-    </div>
-    <div class="feature">
-      <span class="feature__icon">📐</span>
-      <h3>Ідеальний крій</h3>
-      <p>Продумані лекала для 12 порід — від чихуахуа до лабрадора.</p>
-    </div>
-    <div class="feature">
-      <span class="feature__icon">🌱</span>
-      <h3>Еко-виробництво</h3>
-      <p>Відповідальний підхід до кожного етапу виробництва.</p>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="products" id="products">
-    <div class="section-header">
-      <h2>Каталог</h2>
-      <div class="filters">
-        <button class="filter active" data-filter="all">Усі</button>
-        <button class="filter" data-filter="jacket">Куртки</button>
-        <button class="filter" data-filter="sweater">Светри</button>
-        <button class="filter" data-filter="accessory">Аксесуари</button>
-      </div>
-    </div>
-
-    <div class="products__grid" id="productsGrid">
-
-      <div class="card" data-category="jacket">
-        <div class="card__img card__img--1">
-          <span class="card__badge">Новинка</span>
+      <!-- Left: Content -->
+      <div class="hero-content" id="heroContent">
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          AI-Powered Growth Infrastructure
         </div>
-        <div class="card__body">
-          <p class="card__cat">Куртка</p>
-          <h3 class="card__name">Soft Shell Mini</h3>
-          <div class="card__footer">
-            <span class="card__price">890 ₴</span>
-            <button class="btn btn--sm add-to-cart" data-name="Soft Shell Mini" data-price="890">+ Кошик</button>
+
+        <h1 class="hero-title">
+          We build AI systems<br>
+          that <span class="grad">scale construction</span><br>
+          businesses.
+        </h1>
+
+        <p class="hero-sub">
+          Meta Ads, AI automation, CRM systems, lead qualification
+          and premium digital infrastructure — all in one ecosystem.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#cta" class="btn-primary magnetic">BOOK STRATEGY CALL</a>
+          <a href="#flow" class="btn-secondary">VIEW SYSTEMS</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-val">3x</div>
+            <div class="hero-stat-label">Faster lead response</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">80%</div>
+            <div class="hero-stat-label">Less manual work</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">2× ROI</div>
+            <div class="hero-stat-label">Average ad return</div>
           </div>
         </div>
       </div>
 
-      <div class="card" data-category="sweater">
-        <div class="card__img card__img--2"></div>
-        <div class="card__body">
-          <p class="card__cat">Светр</p>
-          <h3 class="card__name">Merino Cozy</h3>
-          <div class="card__footer">
-            <span class="card__price">650 ₴</span>
-            <button class="btn btn--sm add-to-cart" data-name="Merino Cozy" data-price="650">+ Кошик</button>
+      <!-- Right: Ecosystem Visual -->
+      <div class="hero-visual" id="heroVisual">
+        <div class="ecosystem-wrap">
+          <svg id="eco-svg" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="glow-strong" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="8" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <radialGradient id="nodeGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#BB00FF" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#BB00FF" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="bgCircle" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0D0D0D" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#080808" stop-opacity="0.8"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Background circle -->
+            <circle cx="240" cy="240" r="230" fill="url(#bgCircle)" stroke="rgba(187,0,255,0.08)" stroke-width="1"/>
+            <circle cx="240" cy="240" r="200" fill="none" stroke="rgba(187,0,255,0.05)" stroke-width="1" stroke-dasharray="4 8"/>
+
+            <!-- Connection paths (animated) -->
+            <!-- Meta Ads (top) → AI Qual (right) -->
+            <path id="eco-l1" d="M240,80 C320,80 380,160 380,240" stroke="#BB00FF" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.5" fill="none"/>
+            <!-- AI Qual (right) → CRM (bottom-right) -->
+            <path id="eco-l2" d="M380,240 C380,320 320,380 240,380" stroke="#7E3BED" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.5" fill="none"/>
+            <!-- CRM (bottom) → Telegram (bottom-left) -->
+            <path id="eco-l3" d="M240,380 C160,380 100,320 100,240" stroke="#EB1E88" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.5" fill="none"/>
+            <!-- Telegram (left) → Sales (top-left) -->
+            <path id="eco-l4" d="M100,240 C100,160 160,100 240,100" stroke="#A100FF" stroke-width="1.5" stroke-dasharray="6,4" stroke-opacity="0.5" fill="none"/>
+            <!-- Center Analytics -->
+            <line id="eco-l5" x1="240" y1="160" x2="240" y2="200" stroke="#BB00FF" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6"/>
+            <line id="eco-l6" x1="320" y1="240" x2="280" y2="240" stroke="#BB00FF" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6"/>
+            <line id="eco-l7" x1="240" y1="320" x2="240" y2="280" stroke="#BB00FF" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6"/>
+            <line id="eco-l8" x1="160" y1="240" x2="200" y2="240" stroke="#BB00FF" stroke-width="1.5" stroke-dasharray="4,4" stroke-opacity="0.6"/>
+
+            <!-- Center node: Analytics -->
+            <circle cx="240" cy="240" r="44" fill="rgba(187,0,255,0.06)" stroke="rgba(187,0,255,0.25)" stroke-width="1.5" filter="url(#glow)"/>
+            <circle cx="240" cy="240" r="32" fill="rgba(13,13,13,0.9)" stroke="rgba(187,0,255,0.4)" stroke-width="1"/>
+            <text x="240" y="236" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700" fill="rgba(187,0,255,0.9)" letter-spacing="1">ANALYTICS</text>
+            <text x="240" y="248" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" fill="#BB00FF">📊</text>
+
+            <!-- Node: Meta Ads (top) -->
+            <g id="eco-n1" class="eco-node">
+              <circle cx="240" cy="80" r="36" fill="url(#nodeGrad)" filter="url(#glow-strong)"/>
+              <circle cx="240" cy="80" r="28" fill="rgba(13,13,13,0.92)" stroke="rgba(187,0,255,0.35)" stroke-width="1.5"/>
+              <text x="240" y="76" text-anchor="middle" font-size="16" fill="#F0F0F0">📣</text>
+              <text x="240" y="92" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="7.5" font-weight="700" fill="rgba(240,240,240,0.7)" letter-spacing="0.5">META ADS</text>
+            </g>
+
+            <!-- Node: AI Qualification (right) -->
+            <g id="eco-n2" class="eco-node">
+              <circle cx="380" cy="240" r="36" fill="url(#nodeGrad)" filter="url(#glow-strong)"/>
+              <circle cx="380" cy="240" r="28" fill="rgba(13,13,13,0.92)" stroke="rgba(161,0,255,0.35)" stroke-width="1.5"/>
+              <text x="380" y="236" text-anchor="middle" font-size="16" fill="#F0F0F0">🤖</text>
+              <text x="380" y="252" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="7" font-weight="700" fill="rgba(240,240,240,0.7)" letter-spacing="0.5">AI QUALIFY</text>
+            </g>
+
+            <!-- Node: CRM (bottom) -->
+            <g id="eco-n3" class="eco-node">
+              <circle cx="240" cy="400" r="36" fill="url(#nodeGrad)" filter="url(#glow-strong)"/>
+              <circle cx="240" cy="400" r="28" fill="rgba(13,13,13,0.92)" stroke="rgba(235,30,136,0.35)" stroke-width="1.5"/>
+              <text x="240" y="396" text-anchor="middle" font-size="16" fill="#F0F0F0">🗂️</text>
+              <text x="240" y="411" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="7.5" font-weight="700" fill="rgba(240,240,240,0.7)" letter-spacing="0.5">CRM</text>
+            </g>
+
+            <!-- Node: Telegram (left) -->
+            <g id="eco-n4" class="eco-node">
+              <circle cx="100" cy="240" r="36" fill="url(#nodeGrad)" filter="url(#glow-strong)"/>
+              <circle cx="100" cy="240" r="28" fill="rgba(13,13,13,0.92)" stroke="rgba(126,59,237,0.35)" stroke-width="1.5"/>
+              <text x="100" y="236" text-anchor="middle" font-size="16" fill="#F0F0F0">✈️</text>
+              <text x="100" y="252" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="7" font-weight="700" fill="rgba(240,240,240,0.7)" letter-spacing="0.5">TELEGRAM</text>
+            </g>
+
+            <!-- Node: Sales Pipeline (top-left area) -->
+            <g id="eco-n5" class="eco-node">
+              <circle cx="155" cy="140" r="28" fill="rgba(198,255,52,0.05)" filter="url(#glow)"/>
+              <circle cx="155" cy="140" r="22" fill="rgba(13,13,13,0.92)" stroke="rgba(198,255,52,0.25)" stroke-width="1.5"/>
+              <text x="155" y="136" text-anchor="middle" font-size="13" fill="#F0F0F0">💼</text>
+              <text x="155" y="149" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="6.5" font-weight="700" fill="rgba(240,240,240,0.6)" letter-spacing="0.5">SALES</text>
+            </g>
+
+            <!-- Node: Follow-Up (top-right area) -->
+            <g id="eco-n6" class="eco-node">
+              <circle cx="325" cy="140" r="28" fill="rgba(235,30,136,0.05)" filter="url(#glow)"/>
+              <circle cx="325" cy="140" r="22" fill="rgba(13,13,13,0.92)" stroke="rgba(235,30,136,0.25)" stroke-width="1.5"/>
+              <text x="325" y="136" text-anchor="middle" font-size="13" fill="#F0F0F0">🔔</text>
+              <text x="325" y="149" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="6.5" font-weight="700" fill="rgba(240,240,240,0.6)" letter-spacing="0.5">FOLLOW-UP</text>
+            </g>
+
+            <!-- Traveling particle -->
+            <circle id="eco-particle" r="4" fill="#BB00FF" filter="url(#glow)" opacity="0.8"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     TRUST STRIP
+═══════════════════════════════════════════════ -->
+<section id="trust">
+  <div class="trust-track">
+    <div class="trust-list">
+      <span class="trust-item">OpenAI</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Make.com</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">n8n</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Telegram</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Meta</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Lovable</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Cursor</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Bolt</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Claude</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Airtable</span>
+      <span class="trust-dot"></span>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="trust-list" aria-hidden="true">
+      <span class="trust-item">OpenAI</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Make.com</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">n8n</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Telegram</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Meta</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Lovable</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Cursor</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Bolt</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Claude</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item">Airtable</span>
+      <span class="trust-dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROBLEM SECTION
+═══════════════════════════════════════════════ -->
+<section class="section" id="problem">
+  <div class="container">
+    <div class="problem-inner">
+
+      <div class="problem-text">
+        <span class="section-eyebrow">The Problem</span>
+        <h2 class="section-title">
+          Most construction companies<br>
+          lose leads <span class="grad">before the sales call.</span>
+        </h2>
+        <p class="section-body">
+          Potential clients reach out. Nobody replies fast enough.
+          No system exists to qualify, follow up, or close them.
+          Revenue disappears into the void — every single day.
+        </p>
+        <p class="section-body" style="margin-top:-8px; font-size:14px; opacity:0.7;">
+          We've seen this pattern across dozens of construction businesses.
+          The fix is not more salespeople — it's smarter infrastructure.
+        </p>
+      </div>
+
+      <div class="problem-cards">
+        <div class="pain-card">
+          <span class="pain-icon">🐢</span>
+          <div>
+            <div class="pain-card-title">Slow Replies</div>
+            <div class="pain-card-desc">Leads go cold in minutes. Manual responses kill conversions.</div>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🕳️</span>
+          <div>
+            <div class="pain-card-title">Missed Leads</div>
+            <div class="pain-card-desc">Inquiries fall through the cracks with no tracking system.</div>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">⚙️</span>
+          <div>
+            <div class="pain-card-title">No Automation</div>
+            <div class="pain-card-desc">Every step is manual. Time is wasted on repetitive tasks.</div>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">📭</span>
+          <div>
+            <div class="pain-card-title">Weak Follow-Up</div>
+            <div class="pain-card-desc">One message sent. No follow-up sequence. No deal closed.</div>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🗃️</span>
+          <div>
+            <div class="pain-card-title">Chaotic CRM</div>
+            <div class="pain-card-desc">Leads live in spreadsheets, phones, and WhatsApp chats.</div>
+          </div>
+        </div>
+        <div class="pain-card">
+          <span class="pain-icon">🌐</span>
+          <div>
+            <div class="pain-card-title">Outdated Website</div>
+            <div class="pain-card-desc">A weak online presence that fails to convert visitors.</div>
           </div>
         </div>
       </div>
 
-      <div class="card" data-category="jacket">
-        <div class="card__img card__img--3">
-          <span class="card__badge card__badge--sale">−20%</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SOLUTIONS SECTION
+═══════════════════════════════════════════════ -->
+<section class="section" id="solutions">
+  <div class="container">
+
+    <div class="solutions-header">
+      <span class="section-eyebrow">What We Build</span>
+      <h2 class="section-title">AI-Powered Business Systems</h2>
+      <p class="section-body" style="text-align:center; margin-top:16px;">
+        A complete growth ecosystem — not disconnected tools, but one intelligent infrastructure designed to scale.
+      </p>
+    </div>
+
+    <div class="solutions-grid">
+
+      <div class="solution-card">
+        <div class="solution-icon">🤖</div>
+        <div class="solution-title">AI Automation</div>
+        <div class="solution-desc">End-to-end workflows that handle lead intake, qualification, routing and notifications — 24/7, zero human input required.</div>
+        <span class="solution-tag">Core Infrastructure</span>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">🎯</div>
+        <div class="solution-title">AI Lead Qualification</div>
+        <div class="solution-desc">Smart bots that ask the right questions, score leads instantly, and route hot prospects directly to your sales team.</div>
+        <span class="solution-tag">Conversion Engine</span>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">📣</div>
+        <div class="solution-title">Meta Ads Performance</div>
+        <div class="solution-desc">Data-driven Meta campaigns built for construction — targeting, creative strategy, A/B testing, and scaling that delivers real ROI.</div>
+        <span class="solution-tag">Traffic & Growth</span>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">💻</div>
+        <div class="solution-title">Premium Websites</div>
+        <div class="solution-desc">High-converting landing pages and company sites designed for construction brands — fast, mobile-first, and built to generate leads.</div>
+        <span class="solution-tag">Digital Presence</span>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">🗂️</div>
+        <div class="solution-title">CRM Infrastructure</div>
+        <div class="solution-desc">Custom CRM setup with automated pipelines, deal tracking, follow-up sequences and team visibility — your entire sales process, systematized.</div>
+        <span class="solution-tag">Sales Operations</span>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-icon">💬</div>
+        <div class="solution-title">AI Sales Systems</div>
+        <div class="solution-desc">Telegram bots, WhatsApp flows, and AI assistants that engage leads, book calls, and nurture prospects while you focus on delivery.</div>
+        <span class="solution-tag">Sales Automation</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SYSTEM FLOW
+═══════════════════════════════════════════════ -->
+<section class="section" id="flow">
+  <div class="container">
+
+    <div class="flow-header">
+      <span class="section-eyebrow">The Ecosystem</span>
+      <h2 class="section-title">How everything <span class="grad">connects.</span></h2>
+      <p class="section-body" style="text-align:center; margin-top:16px;">
+        Every component works together as one intelligent system — from first click to signed contract.
+      </p>
+    </div>
+
+    <div class="flow-pipeline">
+
+      <div class="flow-node">
+        <div class="flow-node-circle">📣</div>
+        <div class="flow-node-label">Traffic</div>
+        <div class="flow-node-sub">Meta Ads</div>
+      </div>
+
+      <div class="flow-arrow">
+        <svg width="60" height="24" viewBox="0 0 60 24">
+          <path class="flow-line-path" d="M0,12 L52,12" />
+          <polygon points="52,7 60,12 52,17" fill="rgba(187,0,255,0.5)"/>
+        </svg>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-node-circle">🤖</div>
+        <div class="flow-node-label">AI Processing</div>
+        <div class="flow-node-sub">Instant reply</div>
+      </div>
+
+      <div class="flow-arrow">
+        <svg width="60" height="24" viewBox="0 0 60 24">
+          <path class="flow-line-path" d="M0,12 L52,12" />
+          <polygon points="52,7 60,12 52,17" fill="rgba(187,0,255,0.5)"/>
+        </svg>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-node-circle">🎯</div>
+        <div class="flow-node-label">Qualification</div>
+        <div class="flow-node-sub">Score & route</div>
+      </div>
+
+      <div class="flow-arrow">
+        <svg width="60" height="24" viewBox="0 0 60 24">
+          <path class="flow-line-path" d="M0,12 L52,12" />
+          <polygon points="52,7 60,12 52,17" fill="rgba(187,0,255,0.5)"/>
+        </svg>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-node-circle">🗂️</div>
+        <div class="flow-node-label">CRM</div>
+        <div class="flow-node-sub">Track deals</div>
+      </div>
+
+      <div class="flow-arrow">
+        <svg width="60" height="24" viewBox="0 0 60 24">
+          <path class="flow-line-path" d="M0,12 L52,12" />
+          <polygon points="52,7 60,12 52,17" fill="rgba(187,0,255,0.5)"/>
+        </svg>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-node-circle">🔔</div>
+        <div class="flow-node-label">Follow-Up</div>
+        <div class="flow-node-sub">Auto-sequence</div>
+      </div>
+
+      <div class="flow-arrow">
+        <svg width="60" height="24" viewBox="0 0 60 24">
+          <path class="flow-line-path" d="M0,12 L52,12" />
+          <polygon points="52,7 60,12 52,17" fill="rgba(187,0,255,0.5)"/>
+        </svg>
+      </div>
+
+      <div class="flow-node">
+        <div class="flow-node-circle">📊</div>
+        <div class="flow-node-label">Analytics</div>
+        <div class="flow-node-sub">Full visibility</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     AI DEV SECTION
+═══════════════════════════════════════════════ -->
+<section class="section" id="aidev">
+  <div class="container">
+    <div class="aidev-inner">
+
+      <div class="aidev-content">
+        <span class="section-eyebrow">How We Build</span>
+        <h2 class="section-title">
+          Built with next-generation<br>
+          <span class="grad">AI development.</span>
+        </h2>
+        <p class="section-body">
+          We don't use legacy agencies tools. We build with the fastest AI-native stack available —
+          shipping in days what used to take months. Everything is modern, scalable, and built to last.
+        </p>
+
+        <div class="aidev-tags">
+          <span class="aidev-tag">Cursor</span>
+          <span class="aidev-tag">Lovable</span>
+          <span class="aidev-tag">Bolt</span>
+          <span class="aidev-tag">OpenAI</span>
+          <span class="aidev-tag">Claude</span>
+          <span class="aidev-tag">Make.com</span>
+          <span class="aidev-tag">n8n</span>
+          <span class="aidev-tag">Airtable</span>
         </div>
-        <div class="card__body">
-          <p class="card__cat">Куртка</p>
-          <h3 class="card__name">Rain Guard</h3>
-          <div class="card__footer">
-            <span class="card__price">720 ₴ <s>900 ₴</s></span>
-            <button class="btn btn--sm add-to-cart" data-name="Rain Guard" data-price="720">+ Кошик</button>
+
+        <a href="#cta" class="btn-primary magnetic" style="width:fit-content;">See How We Work</a>
+      </div>
+
+      <div class="aidev-visual">
+        <div class="aidev-stack">
+          <div class="aidev-card aidev-card-1">
+            <div class="aidev-card-label">AI Automation Flow</div>
+            <div class="code-line cl-purple"></div>
+            <div class="code-line cl-med"></div>
+            <div class="code-line cl-pink"></div>
+            <div class="code-line cl-short"></div>
+            <div class="code-line cl-med"></div>
+          </div>
+          <div class="aidev-card aidev-card-2">
+            <div class="aidev-card-label">CRM Pipeline</div>
+            <div class="code-line cl-med"></div>
+            <div class="code-line cl-purple"></div>
+            <div class="code-line cl-short"></div>
+          </div>
+          <div class="aidev-card aidev-card-3">
+            <div class="aidev-card-label">Lead Qualifier Bot</div>
+            <div class="code-line cl-pink"></div>
+            <div class="code-line cl-short"></div>
           </div>
         </div>
       </div>
 
-      <div class="card" data-category="accessory">
-        <div class="card__img card__img--4"></div>
-        <div class="card__body">
-          <p class="card__cat">Аксесуар</p>
-          <h3 class="card__name">Wool Bandana</h3>
-          <div class="card__footer">
-            <span class="card__price">220 ₴</span>
-            <button class="btn btn--sm add-to-cart" data-name="Wool Bandana" data-price="220">+ Кошик</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CASES SECTION
+═══════════════════════════════════════════════ -->
+<section class="section" id="cases">
+  <div class="container">
+
+    <div class="cases-header">
+      <span class="section-eyebrow">Systems in Action</span>
+      <h2 class="section-title">Built to <span class="grad">perform.</span></h2>
+      <p class="section-body" style="text-align:center; margin-top:16px;">
+        A glimpse into the dashboards, CRMs, and automation flows we build for our clients.
+      </p>
+    </div>
+
+    <div class="cases-grid">
+
+      <!-- Macbook 1: Analytics Dashboard -->
+      <div class="macbook">
+        <div class="macbook-bar">
+          <div class="mac-dot mac-dot-r"></div>
+          <div class="mac-dot mac-dot-y"></div>
+          <div class="mac-dot mac-dot-g"></div>
+        </div>
+        <div class="macbook-screen">
+          <div class="screen-shimmer"></div>
+          <div class="dash-header">
+            <span class="dash-title">Campaign Analytics</span>
+            <span class="dash-badge">Live</span>
+          </div>
+          <div class="dash-metrics">
+            <div class="dash-metric">
+              <div class="dash-metric-val cv-purple">847</div>
+              <div class="dash-metric-label">Leads / month</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dash-metric-val cv-acid">2.4×</div>
+              <div class="dash-metric-label">ROAS</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dash-metric-val cv-pink">€3.20</div>
+              <div class="dash-metric-label">Cost per lead</div>
+            </div>
+            <div class="dash-metric">
+              <div class="dash-metric-val">94%</div>
+              <div class="dash-metric-label">Response rate</div>
+            </div>
+          </div>
+          <div class="dash-chart">
+            <div class="dash-bar" style="height:45%"></div>
+            <div class="dash-bar" style="height:60%"></div>
+            <div class="dash-bar" style="height:40%"></div>
+            <div class="dash-bar" style="height:80%"></div>
+            <div class="dash-bar" style="height:55%"></div>
+            <div class="dash-bar" style="height:90%"></div>
+            <div class="dash-bar" style="height:70%"></div>
+            <div class="dash-bar" style="height:100%"></div>
           </div>
         </div>
       </div>
 
-      <div class="card" data-category="sweater">
-        <div class="card__img card__img--5"></div>
-        <div class="card__body">
-          <p class="card__cat">Светр</p>
-          <h3 class="card__name">Nordic Knit</h3>
-          <div class="card__footer">
-            <span class="card__price">780 ₴</span>
-            <button class="btn btn--sm add-to-cart" data-name="Nordic Knit" data-price="780">+ Кошик</button>
+      <!-- Macbook 2: CRM Pipeline -->
+      <div class="macbook">
+        <div class="macbook-bar">
+          <div class="mac-dot mac-dot-r"></div>
+          <div class="mac-dot mac-dot-y"></div>
+          <div class="mac-dot mac-dot-g"></div>
+        </div>
+        <div class="macbook-screen">
+          <div class="screen-shimmer"></div>
+          <div class="dash-header">
+            <span class="dash-title">CRM Pipeline</span>
+            <span class="dash-badge">Auto</span>
+          </div>
+          <div class="crm-rows">
+            <div class="crm-row">
+              <div class="crm-dot" style="background:#C6FF34"></div>
+              <span class="crm-name">Ivan Kovalenko — Renovation</span>
+              <span class="crm-status" style="background:rgba(198,255,52,0.12);color:#C6FF34">Hot</span>
+            </div>
+            <div class="crm-row">
+              <div class="crm-dot" style="background:#BB00FF"></div>
+              <span class="crm-name">Petro Shevchenko — New Build</span>
+              <span class="crm-status" style="background:rgba(187,0,255,0.12);color:#BB00FF">In Call</span>
+            </div>
+            <div class="crm-row">
+              <div class="crm-dot" style="background:#EB1E88"></div>
+              <span class="crm-name">Olena Bondar — Extension</span>
+              <span class="crm-status" style="background:rgba(235,30,136,0.12);color:#EB1E88">Follow</span>
+            </div>
+            <div class="crm-row">
+              <div class="crm-dot" style="background:#7E3BED"></div>
+              <span class="crm-name">Andriy Lysenko — Roofing</span>
+              <span class="crm-status" style="background:rgba(126,59,237,0.12);color:#7E3BED">New</span>
+            </div>
+            <div class="crm-row">
+              <div class="crm-dot" style="background:#C6FF34"></div>
+              <span class="crm-name">Maria Kravchuk — Interior</span>
+              <span class="crm-status" style="background:rgba(198,255,52,0.12);color:#C6FF34">Closed ✓</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="card" data-category="accessory">
-        <div class="card__img card__img--6">
-          <span class="card__badge">Новинка</span>
+      <!-- Macbook 3: Funnel -->
+      <div class="macbook">
+        <div class="macbook-bar">
+          <div class="mac-dot mac-dot-r"></div>
+          <div class="mac-dot mac-dot-y"></div>
+          <div class="mac-dot mac-dot-g"></div>
         </div>
-        <div class="card__body">
-          <p class="card__cat">Аксесуар</p>
-          <h3 class="card__name">Bow Collar</h3>
-          <div class="card__footer">
-            <span class="card__price">340 ₴</span>
-            <button class="btn btn--sm add-to-cart" data-name="Bow Collar" data-price="340">+ Кошик</button>
+        <div class="macbook-screen">
+          <div class="screen-shimmer"></div>
+          <div class="dash-header">
+            <span class="dash-title">Lead Funnel</span>
+            <span class="dash-badge">AI</span>
+          </div>
+          <div class="funnel">
+            <div class="funnel-step" style="width:100%; background:rgba(187,0,255,0.18);">
+              <span class="funnel-step-label">Impressions</span>
+              <span class="funnel-step-num">48,200</span>
+            </div>
+            <div class="funnel-step" style="width:82%; background:rgba(161,0,255,0.22);">
+              <span class="funnel-step-label">Clicks</span>
+              <span class="funnel-step-num">3,847</span>
+            </div>
+            <div class="funnel-step" style="width:64%; background:rgba(126,59,237,0.26);">
+              <span class="funnel-step-label">Leads</span>
+              <span class="funnel-step-num">847</span>
+            </div>
+            <div class="funnel-step" style="width:46%; background:rgba(235,30,136,0.25);">
+              <span class="funnel-step-label">Qualified</span>
+              <span class="funnel-step-num">312</span>
+            </div>
+            <div class="funnel-step" style="width:30%; background:rgba(198,255,52,0.2);">
+              <span class="funnel-step-label">Closed</span>
+              <span class="funnel-step-num" style="color:#C6FF34;">124 🏆</span>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about__text">
-      <p class="hero__tag">Наша історія</p>
-      <h2>Ми створюємо з любов'ю</h2>
-      <p>PAWDROBE — це невелика київська майстерня, де кожен виріб шиється вручну. Ми віримо, що зручність і естетика не суперечать одне одному — навіть у світі собачої моди.</p>
-      <p>Наші вироби проходять тест на зручність від команди справжніх чотирилапих тестувальників.</p>
-      <a href="#contact" class="btn btn--outline">Написати нам</a>
-    </div>
-    <div class="about__stats">
-      <div class="stat">
-        <span class="stat__num">500+</span>
-        <span class="stat__label">щасливих клієнтів</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">12</span>
-        <span class="stat__label">порід у розмірній сітці</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">3</span>
-        <span class="stat__label">роки на ринку</span>
-      </div>
-      <div class="stat">
-        <span class="stat__num">100%</span>
-        <span class="stat__label">натуральні матеріали</span>
-      </div>
-    </div>
-  </section>
+<!-- ═══════════════════════════════════════════════
+     PROCESS SECTION
+═══════════════════════════════════════════════ -->
+<section class="section" id="process">
+  <div class="container">
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Зв'язатись з нами</h2>
-    <p>Є питання щодо розміру або замовлення? Напишіть — відповімо протягом години.</p>
-    <form class="contact__form" id="contactForm">
-      <div class="form-row">
-        <input type="text" placeholder="Ваше ім'я" required />
-        <input type="email" placeholder="Email" required />
+    <div class="process-header">
+      <span class="section-eyebrow">How We Work</span>
+      <h2 class="section-title">From strategy to scale<br><span class="grad">in 4 steps.</span></h2>
+    </div>
+
+    <div class="process-timeline" id="processTimeline">
+      <div class="timeline-line">
+        <div class="timeline-progress" id="timelineProgress"></div>
       </div>
-      <textarea placeholder="Ваше повідомлення..." rows="4" required></textarea>
-      <button type="submit" class="btn">Надіслати</button>
-    </form>
-    <div class="contact__success" id="formSuccess">
-      ✓ Дякуємо! Ми зв'яжемось з вами найближчим часом.
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__top">
-      <span class="nav__logo">PAWDROBE</span>
-      <div class="footer__links">
-        <a href="#products">Каталог</a>
-        <a href="#about">Про нас</a>
-        <a href="#contact">Контакти</a>
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <div class="step-title">Strategy</div>
+          <div class="step-desc">
+            We map your current sales process, identify where leads are lost, and design an AI infrastructure blueprint tailored to your specific construction niche and market.
+          </div>
+          <div class="step-pills">
+            <span class="step-pill">Discovery Call</span>
+            <span class="step-pill">Audit</span>
+            <span class="step-pill">Blueprint</span>
+          </div>
+        </div>
       </div>
-      <div class="footer__social">
-        <a href="#" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        </a>
+
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <div class="step-title">Infrastructure</div>
+          <div class="step-desc">
+            We build the full technology stack — CRM setup, Meta Ads account structure, website, automation pipelines, and integration between every system.
+          </div>
+          <div class="step-pills">
+            <span class="step-pill">CRM Build</span>
+            <span class="step-pill">Ads Setup</span>
+            <span class="step-pill">Website</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p>© 2026 PAWDROBE. Зроблено з ❤️ у Києві.</p>
-    </div>
-  </footer>
 
-  <!-- CART DRAWER -->
-  <div class="cart-overlay" id="cartOverlay"></div>
-  <aside class="cart" id="cartDrawer">
-    <div class="cart__header">
-      <h3>Кошик</h3>
-      <button class="cart__close" id="cartClose">✕</button>
-    </div>
-    <div class="cart__items" id="cartItems">
-      <p class="cart__empty">Кошик порожній 🐾</p>
-    </div>
-    <div class="cart__footer" id="cartFooter" style="display:none">
-      <div class="cart__total">Разом: <strong id="cartTotal">0 ₴</strong></div>
-      <button class="btn" style="width:100%">Оформити замовлення</button>
-    </div>
-  </aside>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <div class="step-title">Automation</div>
+          <div class="step-desc">
+            AI bots, follow-up sequences, and qualification flows go live. Your team starts receiving pre-qualified leads on Telegram with full context — while you sleep.
+          </div>
+          <div class="step-pills">
+            <span class="step-pill">AI Bots</span>
+            <span class="step-pill">Sequences</span>
+            <span class="step-pill">Integrations</span>
+          </div>
+        </div>
+      </div>
 
-  <!-- TOAST -->
-  <div class="toast" id="toast"></div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <div class="step-title">Scaling</div>
+          <div class="step-desc">
+            We analyze data, optimize campaigns, refine qualification criteria, and scale what works. Monthly reporting keeps you in full control of the growth machine.
+          </div>
+          <div class="step-pills">
+            <span class="step-pill">Optimization</span>
+            <span class="step-pill">Reporting</span>
+            <span class="step-pill">Scale</span>
+          </div>
+        </div>
+      </div>
 
-  <script src="app.js"></script>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CTA SECTION
+═══════════════════════════════════════════════ -->
+<section class="section" id="cta">
+  <div class="cta-orb"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <canvas id="cta-canvas"></canvas>
+
+  <div class="cta-content">
+    <span class="section-eyebrow" style="justify-content:center;">Ready to grow?</span>
+    <h2 class="cta-title">
+      Build a construction business<br>
+      that runs like a modern<br>
+      <span class="grad">AI company.</span>
+    </h2>
+    <p class="cta-sub">
+      Book a free 30-minute strategy call. No fluff, no commitment —
+      just a clear plan for your AI growth infrastructure.
+    </p>
+    <a href="https://t.me/hvylya_agency" class="btn-primary magnetic" style="font-size:14px; padding:18px 40px;">
+      BOOK STRATEGY CALL &nbsp;→
+    </a>
+    <p class="cta-note">Free consultation · No commitment · Results-focused</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+
+    <div class="footer-inner">
+
+      <div>
+        <span class="footer-logo">HVYLYA</span>
+        <p class="footer-tagline">AI-Powered Growth Infrastructure for Construction Businesses</p>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#solutions">Services</a></li>
+          <li><a href="#flow">Systems</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <div class="footer-socials">
+          <!-- Telegram -->
+          <a href="https://t.me/hvylya_agency" class="social-icon" aria-label="Telegram" title="Telegram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.247l-2.04 9.604c-.15.67-.55.834-1.113.52l-3.065-2.26-1.48 1.424c-.163.163-.3.3-.616.3l.22-3.11 5.67-5.12c.246-.218-.053-.34-.382-.12L6.88 14.05l-2.996-.936c-.652-.203-.665-.652.136-.966l11.692-4.51c.542-.196 1.016.134.85.61z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 HVYLYA Agency. All rights reserved.</span>
+      <span>Built with AI ⚡</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
